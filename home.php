@@ -14,7 +14,7 @@ $u_role = $_SESSION['user_role'] ?? 'Rol';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TRUFIX | Home</title>
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="styles/home.css" />
   </head>
   <body>
     <div class="layout">
