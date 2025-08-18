@@ -1,9 +1,18 @@
 <?php
-// Si ya hay sesión iniciada, manda al home
 session_start();
+require_once __DIR__ . '/src/config/db.php';
+
+// Prueba la conexión
+try {
+    $pdo = db();
+    // Si llega aquí, la conexión fue exitosa
+} catch (Exception $e) {
+    die("Error de conexión: Por favor contacte al administrador");
+}
+
 if (!empty($_SESSION['user_id'])) {
-  header('Location: home.php');
-  exit;
+    header('Location: home.php');
+    exit;
 }
 ?>
 <!DOCTYPE html>
